@@ -10,7 +10,7 @@ MY Vim Rails
 新手：
  1 先确认自己$HOME下没有.vim文件夹了，有就删了
  2 $cd
- 3 $git clone git://github.com/azhao1981/My-Vim-Rails.git  .vim
+ 3 $git clone https://github.com/wonderflow/My-Vim-Rails  .vim
  4 git submodule init
  5 git submodule update
  6 cp .vimrc ~/.vimrc
