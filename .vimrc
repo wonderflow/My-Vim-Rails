@@ -1,11 +1,16 @@
+
+ set guifont=Consolas\ 12
+
+
+
 " 启动vim时窗口的大小
-  set lines=30 columns=120
+  set lines=40 columns=90
 
 " 不兼容VI键盘，使用vim键盘
   set nocompatible
 
 " 调用Pathogen插件来管理插件 必须在 filetype plugin indent on 之前
-call pathogen#runtime_append_all_bundles()
+  call pathogen#runtime_append_all_bundles()
 
 " 文件类型识别
   filetype on
@@ -44,16 +49,20 @@ call pathogen#runtime_append_all_bundles()
   set incsearch
 
 " tab宽度
-  set tabstop=4
-  set cindent shiftwidth=4
-  set autoindent shiftwidth=4
+" set tabstop=4
+" set cindent shiftwidth=4
+" set autoindent shiftwidth=4
+
+set expandtab " 使用space代替tab. 
+set tabstop=2 " 四个空格。 
+set shiftwidth=2 " 自动缩进的宽度。
 
 " 命令行下按tab键自动完成
   set wildmode=list:full
   set wildmenu
 
 " 设置默认的颜色
-  colorscheme railscasts
+  colorscheme torte
 
 " 带有如下符号的单词不要被换行分割
   set iskeyword+=_,$,@,%,#,-
@@ -80,6 +89,9 @@ call pathogen#runtime_append_all_bundles()
   map <C-k> <C-W>k
   map <C-h> <C-W>h
   map <C-l> <C-W>l
+
+" F5自动运行
+  map <F5> <Esc>:w<CR>:!%:p<CR>
 
 " 设置FuzzyFinder
   let mapleader = "\\"
