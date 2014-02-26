@@ -37,9 +37,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-rspec"]
-	path = bundle/vim-rspec
-	url = git://github.com/taq/vim-rspec.git
 [submodule "bundle/vim-octopress"]
 	path = bundle/vim-octopress
 	url = git://github.com/tangledhelix/vim-octopress.git
