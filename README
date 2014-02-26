@@ -1,27 +1,36 @@
-MY Vim Rails
+# MY Vim Rails
 
 -----------------------
-目标：
-1 维护自己的VIM插件及配置文件
-2 对新手友好，帮助新手在几分钟内建立一个可以用于开发Rails的VIM环境，不用慢慢找插件
-3 与他人分享插件
 
-安装：
-新手：
- 1 先确认自己$HOME下没有.vim文件夹了，有就删了
- 2 $cd
- 3 $git clone https://github.com/wonderflow/My-Vim-Rails  .vim
- 4 git submodule init
- 5 git submodule update
- 6 cp .vimrc ~/.vimrc
-老手：
- 如果也喜欢，clone一个项目 ，把autoload  bundle目录拷过来就可以了。我用Pathogen来管理，大侠您就随便了
+我根据DCCMX的nixfile项目里面的.vimrc文件修改了.vimrc里面的配置，插件使用依旧如下。
 
-建议
- 自己fork一个分支
- vim最强大的地方就是可以自己改，想要什么有什么，配合github，您还有了"云vim"啦！
+***
 
-插件列表：
+## 目标：
+1. 维护自己的VIM插件及配置文件
+2. 对新手友好，帮助新手在几分钟内建立一个可以用于开发Rails的VIM环境，不用慢慢找插件
+3. 与他人分享插件
+
+## 安装：
+### 新手：
+1. 先确认自己$HOME下没有.vim文件夹了，有就删了
+2. $cd ~
+3. $git clone https://github.com/wonderflow/My-Vim-Rails  .vim
+4. cd .vim
+5. git submodule init
+6. git submodule update
+7. ln $PWD/.vimrc ~
+
+### 老手：
+如果也喜欢，clone一个项目 ，把autoload  bundle目录拷过来就可以了。我用Pathogen来管理，大侠您就随便了
+
+## 建议
+自己fork一个分支
+
+vim最强大的地方就是可以自己改，想要什么有什么，配合github，您还有了"云vim"啦！
+
+## 插件列表：
+
 	pathogen.vim		插件管理
 	NERDTree.vim：		目录树和标签
 	Rails.vim：			Rails插件
@@ -37,32 +46,34 @@ MY Vim Rails
 	vim-fugitive：		git插件，自称最好的git插件啦，插件不怎么滴，提供的git视频教程却不错
 	vim-rspec
 
-简单使用方法 ：
-  pathogen
+### 简单使用方法 ：
+
+####  pathogen
   	在.vimrc里加
 		# 必须在 filetype plugin indent on 之前
 		call pathogen#runtime_append_all_bundles()
 		之后插件只要放到~/.vim/bundle目录下就可以生效
-	NERDTree
-		使用:NERDTree调出目录树，或是按.vimrc里配置后用F8
-	Rails
+#### NERDTree
+		使用:NERDTree调出目录树，或是按.vimrc里配置后用",gl""
+#### Rails
 		这个就说来话长了。。Rpreview Rmodel Rcontroller 等 等
-	Snipmate
+#### Snipmate
 		tab把代码片段完成，关键是查看和修改，在snipmate.vim/snippets下，修改成自己喜欢和习惯的快捷键和代码很重要
-	FuzzyFinder
-		懒人必备，设好快捷键后各种快\\F \\f
-	TabBar
+#### FuzzyFinder
+		懒人必备，设好快捷键后各种快,F ,f
+#### TabBar
 		Alt+数字可切换Buffter
-	supertab
+#### supertab
 		输入几个字母后按下tab看看
-	Rubytest
-		不怎么用，用guard
-	autoclose:			输入"("之类的会帮你补后面
-	vim-surround：		cs"' 把"ddddd	"  变成'ddddd '
-	Color-Sampler-Pack+ScrollColors+vimrc里设置后可以用F2F3来换配色
+#### autoclose
+	    输入"("之类的会帮你补后面
+#### vim-surround
+		cs"' 把"ddddd	"  变成'ddddd '
+#### Color-Sampler-Pack+ScrollColors+vimrc
+       设置后可以用F2F3来换配色
 
 
-参考：
+## 参考：
 
 https://github.com/scrooloose/nerdtree
 git clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
